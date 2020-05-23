@@ -13,7 +13,7 @@ class KafkaProducerCommon {
       kafka.send(records)
     }
     catch{
-      case e: IndexOutOfBoundsException => System.out.println("hi")
+      case e: IndexOutOfBoundsException => System.out.println("3")
 
 
     }

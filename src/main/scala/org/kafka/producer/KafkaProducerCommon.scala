@@ -15,6 +15,7 @@ class KafkaProducerCommon {
     catch{
       case e: IndexOutOfBoundsException => System.out.println("hi")
 
+
     }
 
 

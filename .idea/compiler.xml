@@ -9,5 +9,8 @@
         <module name="DataEngineering" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DataEngineering" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

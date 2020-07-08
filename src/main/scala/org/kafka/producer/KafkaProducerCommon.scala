@@ -5,7 +5,7 @@ class KafkaProducerCommon {
   def  kafkaProducer(topic : String, brokers : String): Unit={
     try {
       val props = new Properties()
-      props.put("bootstrap.server", "")
+      props.put("bootstrap.server", brokers)
       props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerialization")
       props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerialization")
       val kafka = new KafkaProducer[String, String](props)
@@ -15,9 +15,11 @@ class KafkaProducerCommon {
     catch{
       case e: IndexOutOfBoundsException => System.out.println("00   ")
 
-
     }
+  }
 
-
+  def main(args: Array[String]): Unit = {
+    val kafka = new KafkaProducerCommon()
+    kafka.kafkaProducer("test","127.0.0.13:9094")
   }
 }
